@@ -5,12 +5,6 @@ from models import Person
 # Create your views here.
 
 def teaminfo(request):
-	values = request.META.items()
-	values.sort()
-	html = []
-	# for k, v in values:
-	# 	html.append('<tr><td>%s</td><td>%s</td></tr>' % (k, v))
-	# return HttpResponse("<table>%s</table>" % '\n'.join(html))
 	return render(request, 'user_manage.html')
 
 def addPerson(request):
