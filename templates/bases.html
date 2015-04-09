@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JUA|{% block title %}{% endblock %}</title>
+
+	<script src="/media/lib/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/media/lib/underscore.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/media/lib/backbone.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/media/lib/backbone-localstorage.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/media/js/tpl-loader.js" type="text/javascript" charset="utf-8"></script>
+
+	<link href="/media/lib/bootstrap3.1.1/css/bootstrap.min.css" type="text/css" rel="stylesheet" charset="utf-8">
+	<link href="/media/css/commen.css" type="text/css" rel="stylesheet" charset="utf-8">
+	{% for css in csses %}
+	<link href="/media/{{ css }}" type="text/css" rel="stylesheet" charset="utf-8">
+	{% endfor %}
+
+<body>
+	<div class="row">
+		<header id="header">
+			<h1>JUA</h1>
+			{% block header %}{% endblock %}
+		</header>
+		<article class="article">{% block main %}{% endblock %}</article>
+	</div>
+</body>
+	{% block script %}{% endblock %}
+	{% for script in scripts %}
+	<script src="/media/{{ script }}" type="text/javascript" charset="utf-8"></script>
+	{% endfor %}
+</html>

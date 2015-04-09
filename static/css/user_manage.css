@@ -1,0 +1,9 @@
+div.main{
+	/*text-align: center;*/
+	width: 70%;
+	padding-left: 29%
+}
+form button[type=submit]{
+	width: 50%;
+	margin-left: 25%;
+}

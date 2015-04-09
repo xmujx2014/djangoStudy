@@ -1,0 +1,65 @@
+{% extends "bases.html" %}
+{% block title %}USER{% endblock %}
+{% set csses=(
+'css/user_manage.css',
+) %}
+
+{% block main %}
+	<table>
+		{% for k, v in values %}
+		<tr>
+			<td>{{k}}</td>
+			<td>{{v}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	<label>{{str}}</label>
+	<div class="main"></div>
+{% endblock %}
+
+{% block script %}
+	<script id="add_person" class="template" type="text/html">
+		<form action="addPerson/" method="post">
+			<div class="addPerson col-md-12">
+				<div class="col-md-6">
+					<label>
+						<span>Team:</span>
+						<input type="text" name='team' class="form-control"></label>
+					<label>
+						<span>Family Name:</span>
+						<input type="text" name='family_name' class="form-control"></label>
+					<label>
+						<span>Given Name :</span>
+						<input type="text" name='given_name' class="form-control"></label>
+					<label>
+						<span>Simple :</span>
+						<input type="text" name='simple_name' class="form-control"></label>
+				</div>
+				<div class="col-md-6">
+					<label>
+						<span>ID :</span>
+						<input type="text" name='identity_num' class="form-control"></label>
+					<label>
+						<span>Gender :</span>
+						<select name="gender" class="form-control">
+							<option>hh</option>
+						</select></label>
+					<label>
+						<span>Group :</span>
+						<select name="groupe" class="form-control">
+							<option>hh</option>
+						</select></label>
+					<label>
+						<span>Category :</span>
+						<select name="category" class="form-control">
+							<option>hh</option>
+						</select></label>
+				</div>
+			</div>
+			<button type="submit">Submit</button>
+		</form>
+	</script>
+{% endblock %}
+{% set scripts = (
+'js/user_manage.js',
+) %}
