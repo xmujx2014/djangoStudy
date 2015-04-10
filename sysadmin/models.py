@@ -2,7 +2,7 @@ from django.db import models
 
 # # Create your models here.
 class Event(models.Model):
-	id = models.IntegerField(primary_key=True)
+	id = models.AutoField(primary_key=True,)
 	type = models.CharField(max_length=100)
 	name = models.CharField(max_length=100)
 	short_name = models.CharField(max_length=45)
@@ -27,7 +27,7 @@ class Event(models.Model):
 		db_table = u'jua_event'
 
 class Category(models.Model):
-	id = models.IntegerField(primary_key=True)
+	id = models.AutoField(primary_key=True)
 	weight = models.CharField(max_length=45)
 	gender = models.CharField(max_length=10)
 	drawn = models.IntegerField(max_length=4)
@@ -39,7 +39,7 @@ class Category(models.Model):
 
 
 class AdminUser(models.Model):
-	id = models.IntegerField(primary_key=True)
+	id = models.AutoField(primary_key=True)
 	username = models.CharField(max_length=20)
 	passwd = models.CharField(max_length=20)
 	

@@ -5,7 +5,7 @@ import views
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', views.index, name='index'),
-    url(r'^login/', views.login, name='login'),
+    url(r'^login/', views.jua_login, name='jua_login'),
     url(r'^sysadmin/', include('sysadmin.urls', namespace='sysadmin')),
     url(r'^usermanage/', include('usermanage.urls', namespace='usermanage')),
 
